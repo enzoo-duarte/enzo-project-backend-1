@@ -11,5 +11,8 @@
   "description": "",
   "engines": {
     "node": ">=20.16.0"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
   }
 }
