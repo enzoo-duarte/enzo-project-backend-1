@@ -1,15 +1,15 @@
 [
     {
         "id": 1,
-        "img": "./img/camiseta.png",
-        "nombre": "Camiseta Volcom",
-        "talle": ["S", "M", "L", "XL"],
-        "precio": 35,
-        "categoria": "indumentaria"
+        "img": "/img/gorra.png",
+        "nombre": "Gorra Stance",
+        "talle": ["Único"],
+        "precio": 25,
+        "categoria": "accesorios"
     },
     {
         "id": 2,
-        "img": "./img/zapatillas.png",
+        "img": "/img/zapatillas.png",
         "nombre": "Zapatillas Adidas",
         "talle": ["36", "37", "38", "39", "40", "41", "42", "43", "44"],
         "precio": 95,
@@ -17,15 +17,15 @@
     },
     {
         "id": 3,
-        "img": "./img/gorra.png",
-        "nombre": "Gorra Stance",
-        "talle": ["Único"],
-        "precio": 25,
-        "categoria": "accesorios"
+        "img": "/img/camiseta.png",
+        "nombre": "Camiseta Volcom",
+        "talle": ["S", "M", "L", "XL"],
+        "precio": 35,
+        "categoria": "indumentaria"
     },
     {
         "id": 4,
-        "img": "./img/campera.png",
+        "img": "/img/campera.png",
         "nombre": "Campera Volcom",
         "talle": ["S", "M", "L", "XL"],
         "precio": 85,
@@ -33,7 +33,7 @@
     },
     {
         "id": 5,
-        "img": "./img/buzo.png",
+        "img": "/img/buzo.png",
         "nombre": "Buzo Vans",
         "talle": ["S", "M", "L", "XL"],
         "precio": 60,
@@ -41,7 +41,7 @@
     },
     {
         "id": 6,
-        "img": "./img/ojotas.png",
+        "img": "/img/ojotas.png",
         "nombre": "Ojotas Adidas",
         "talle": ["36", "37", "38", "39", "40", "41", "42", "43", "44"],
         "precio": 50,
@@ -49,7 +49,7 @@
     },
     {
         "id": 7,
-        "img": "./img/rinonera.png",
+        "img": "/img/rinonera.png",
         "nombre": "Riñonera Volcom",
         "talle": ["Único"],
         "precio": 30,
@@ -57,7 +57,7 @@
     },
     {
         "id": 8,
-        "img": "./img/sombrero.png",
+        "img": "/img/sombrero.png",
         "nombre": "Sombrero Adidas",
         "talle": ["Único"],
         "precio": 35,
@@ -65,7 +65,7 @@
     },
     {
         "id": 9,
-        "img": "./img/botas.png",
+        "img": "/img/botas.png",
         "nombre": "Botas UGG",
         "talle": ["36", "37", "38", "39", "40", "41", "42", "43", "44"],
         "precio": 120,

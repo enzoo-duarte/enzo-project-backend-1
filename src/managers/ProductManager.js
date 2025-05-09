@@ -8,11 +8,10 @@ class ProductManager {
 
     async _loadProducts() {
     try {
-      await fs.access(this.path); // Esto valida si existe
+        await fs.access(this.path); 
         const data = await fs.readFile(this.path, 'utf-8');
         return JSON.parse(data);
     } catch (err) {
-// Si no existe lo crea pero con un array vacío
         await fs.writeFile(this.path, '[]');
         return [];
     }
@@ -39,12 +38,10 @@ class ProductManager {
     async addProduct(product) {
         const products = await this._loadProducts();
 
-// Esto valida que no exista un producto con el mismo id
     if (products.some(p => p.id === product.id)) {
         throw new Error(`Ya existe un producto con ID ${product.id}`);
     }
 
-// Si no se pasó un id, se genera uno 
     if (!product.id) {
         const ids = products.map(p => p.id);
         const maxId = ids.length > 0 ? Math.max(...ids) : 0;
@@ -64,12 +61,10 @@ class ProductManager {
         throw new Error(`No se encontraron productos con este ID ${pid}`);
     }
 
-// Esto sería para evitar que se intente modificar el ID
     if ('id' in updateFields) {
         delete updateFields.id;
     }
 
-// Y esto sería para actualizar solo las propiedades dentro de updateFields
     products[index] = {
         ...products[index],
         ...updateFields
