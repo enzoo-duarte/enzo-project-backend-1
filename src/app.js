@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const viewsRouter = require('./routes/views.router');
-const productsRouter = require('./routes/products.router'); // lo vas a crear ahora
+const productsRouter = require('./routes/products.router'); 
 
 const app = express();
 

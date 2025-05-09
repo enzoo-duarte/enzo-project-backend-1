@@ -1,0 +1,70 @@
+<h1>Productos en tiempo real</h1>
+
+<form id="addProductForm">
+    <h2>Agregar producto</h2>
+    <input type="text" name="nombre" placeholder="Nombre" required />
+    <input type="number" name="precio" placeholder="Precio" required />
+    <input type="text" name="img" placeholder="Ruta de imagen (/img/archivo.png)" required />
+    <input type="text" name="categoria" placeholder="Categoría" required />
+    <input type="text" name="talle" placeholder="Talles separados por coma (ej: S,M,L)" required />
+    <button type="submit">Agregar</button>
+</form>
+
+<hr />
+
+<h2>Lista de productos</h2>
+<ul id="productList">
+    {{#each products}}
+        <li data-id="{{id}}">
+            <strong>{{nombre}}</strong> - ${{precio}} <br />
+            <img src="{{img}}" alt="{{nombre}}" width="150" /> <br />
+            <button class="delete-btn">Eliminar</button>
+        </li>
+    {{/each}}
+</ul>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const socket = io();
+
+    const form = document.getElementById('addProductForm');
+    const productList = document.getElementById('productList');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const producto = {
+            nombre: formData.get('nombre'),
+            precio: parseFloat(formData.get('precio')),
+            img: formData.get('img'),
+            categoria: formData.get('categoria'),
+            talle: formData.get('talle').split(',').map(t => t.trim())
+        };
+
+        socket.emit('newProduct', producto);
+        form.reset();
+    });
+
+    productList.addEventListener('click', (e) => {
+        if (e.target.classList.contains('delete-btn')) {
+            const li = e.target.closest('li');
+            const productId = parseInt(li.getAttribute('data-id'));
+            socket.emit('deleteProduct', productId);
+        }
+    });
+
+    socket.on('updateProducts', (products) => {
+        productList.innerHTML = '';
+        products.forEach(p => {
+            const li = document.createElement('li');
+            li.setAttribute('data-id', p.id);
+            li.innerHTML = `
+                <strong>${p.nombre}</strong> - $${p.precio} <br />
+                <img src="${p.img}" alt="${p.nombre}" width="150" /> <br />
+                <button class="delete-btn">Eliminar</button>
+            `;
+            productList.appendChild(li);
+        });
+    });
+</script>
