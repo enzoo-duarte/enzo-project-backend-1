@@ -5,7 +5,6 @@ const ProductManager = require('../managers/ProductManager');
 
 const productManager = new ProductManager(path.join(__dirname, '../data/products.json'));
 
-// Ruta raíz que renderiza la vista home con productos
 router.get('/', async (req, res) => {
     try {
         const products = await productManager.getProducts();
