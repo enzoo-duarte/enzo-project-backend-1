@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const viewsRouter = require('./routes/views.router');
-const productsRouter = require('./routes/products.router'); 
+const productsRouter = require('./routes/products.router');
+const cartsRouter = require('./routes/carts.router');
 
 const app = express();
 
@@ -19,5 +20,6 @@ app.set('views', path.join(__dirname, 'views'));
 // ROUTES
 app.use('/', viewsRouter);
 app.use('/api/products', productsRouter);
+app.use('/api/carts', cartsRouter);
 
 module.exports = app;
