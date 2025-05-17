@@ -31,4 +31,17 @@ router.get('/:cid', async (req, res) => {
     }
 });
 
+// PARA AGREGAR PRODUCTO A UN CARRITO
+router.post('/:cid/product/:pid', async (req, res) => {
+    try {
+        const cid = parseInt(req.params.cid);
+        const pid = parseInt(req.params.pid);
+
+        const updatedCart = await cartManager.addProductToCart(cid, pid);
+        res.json({ message: 'Producto agregado al carrito', cart: updatedCart });
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+});
+
 module.exports = router;

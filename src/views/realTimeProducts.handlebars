@@ -49,7 +49,7 @@
     productList.addEventListener('click', (e) => {
         if (e.target.classList.contains('delete-btn')) {
             const li = e.target.closest('li');
-            const productId = parseInt(li.getAttribute('data-id'));
+            const productId = li.getAttribute('data-id'); //CORRECION PARA TOMAR EL ID COMO STRING
             socket.emit('deleteProduct', productId);
         }
     });
