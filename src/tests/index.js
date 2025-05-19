@@ -1,4 +1,4 @@
-const ProductManager = require('../../ProductManager');
+const ProductManager = require('../managers/ProductManager');
 const manager = new ProductManager();
 
 (async () => {

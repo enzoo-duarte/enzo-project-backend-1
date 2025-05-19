@@ -5,7 +5,9 @@ const ProductManager = require('./ProductManager');
 class CartManager {
     constructor(filePath = 'carts.json') {
         this.path = path.resolve(__dirname, filePath);
-        this.productManager = new ProductManager(); // INSTANCIA PARA ACCEDER A LOS PRODUCTOS
+        this.productManager = new ProductManager(
+            path.join(__dirname, '../data/products.json') // CORRECCION DE LA RUTA AL JSON
+        );
     }
 
     async _loadCarts() {
