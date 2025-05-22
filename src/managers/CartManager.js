@@ -73,6 +73,27 @@ class CartManager {
         await this._saveCarts(carts);
         return cart;
     }
+
+    // MÉTODO PARA ELIMINAR PRODUCTO DE UN CARRITO
+    async removeProductFromCart(cid, pid) {
+        const carts = await this._loadCarts();
+        const cartIndex = carts.findIndex(c => c.id === cid);
+
+        if (cartIndex === -1) {
+            throw new Error(`No se encontró el carrito con ID ${cid}`);
+        }
+
+        const cart = carts[cartIndex];
+        const productIndex = cart.products.findIndex(p => p.product === pid);
+
+        if (productIndex === -1) {
+            throw new Error(`El producto con ID ${pid} no está en el carrito`);
+        }
+
+        cart.products.splice(productIndex, 1);
+        await this._saveCarts(carts);
+        return cart;
+    }
 }
 
 module.exports = CartManager;

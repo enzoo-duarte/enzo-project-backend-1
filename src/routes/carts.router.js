@@ -44,4 +44,17 @@ router.post('/:cid/product/:pid', async (req, res) => {
     }
 });
 
+// PARA ELIMINAR UN PRODUCTO DE UN CARRITO
+router.delete('/:cid/product/:pid', async (req, res) => {
+    try {
+        const cid = parseInt(req.params.cid);
+        const pid = parseInt(req.params.pid);
+
+        const updatedCart = await cartManager.removeProductFromCart(cid, pid);
+        res.json({ message: 'Producto eliminado del carrito', cart: updatedCart });
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+});
+
 module.exports = router;
