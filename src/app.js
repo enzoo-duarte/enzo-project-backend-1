@@ -32,7 +32,7 @@ app.use('/api/products', productsRouter);
 app.use('/api/carts', cartsRouter);
 
 // Conexión a MongoDB Atlas
-mongoose.connect('mongodb+srv://Cluster71288:UGp7QVFjZGpw@cluster71288.deco0q2.mongodb.net/Store?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://USUARIO:CONTRASEÑA@cluster71288.deco0q2.mongodb.net/Store?retryWrites=true&w=majority')
     .then(() => {
         console.log('🟢 Conectado a MongoDB Atlas');
         const PORT = 3000;
