@@ -1,3 +1,6 @@
+//SE ANULA POR MIGRACIÓN DE LÓGICA A CartModel
+
+/* 
 const fs = require('fs').promises;
 const path = require('path');
 const ProductManager = require('./ProductManager');
@@ -97,3 +100,4 @@ class CartManager {
 }
 
 module.exports = CartManager;
+*/

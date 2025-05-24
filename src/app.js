@@ -7,8 +7,7 @@ const mongoose = require('mongoose');
 /* const viewsRouter = require('./routes/views.router'); */
 const productsRouter = require('./routes/products.router');
 
-//SE ANULA PARA PODER HACER PRUEBAS CON POSTMAN, YA QUE TIRA ERROR 
-/* const cartsRouter = require('./routes/carts.router'); */
+const cartsRouter = require('./routes/carts.router');
 
 const app = express();
 
@@ -28,8 +27,7 @@ app.set('views', path.join(__dirname, 'views'));
 /* app.use('/', viewsRouter); */
 app.use('/api/products', productsRouter);
 
-//SE ANULA PARA PODER HACER PRUEBAS CON POSTMAN, YA QUE TIRA ERROR 
-/* app.use('/api/carts', cartsRouter); */
+app.use('/api/carts', cartsRouter);
 
 // Conexión a MongoDB Atlas
 mongoose.connect('mongodb+srv://Cluster71288:UGp7QVFjZGpw@cluster71288.deco0q2.mongodb.net/Store?retryWrites=true&w=majority')

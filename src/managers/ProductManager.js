@@ -1,4 +1,7 @@
-/* const fs = require('fs').promises;
+//SE ANULA POR MIGRACIÓN DE LÓGICA A CartModel
+
+/* 
+const fs = require('fs').promises;
 const path = require('path');
 
 class ProductManager {
@@ -88,5 +91,4 @@ class ProductManager {
 }
 
 module.exports = ProductManager;
-
 */
