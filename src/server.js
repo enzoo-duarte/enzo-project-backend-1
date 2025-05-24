@@ -1,3 +1,7 @@
+// SE ANULA POR LA MIGRACION A MongoDB
+
+/* 
+
 const http = require('http');
 const { Server } = require('socket.io');
 const app = require('./app');
@@ -43,3 +47,5 @@ const PORT = 3000;
 server.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+
+*/

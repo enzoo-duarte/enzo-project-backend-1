@@ -1,3 +1,6 @@
+// SE ANULA PARA PODER HACER PRUEBAS CON POSTMAN, YA QUE TIRA ERROR 
+
+/* 
 const express = require('express');
 const router = express.Router();
 const path = require('path');
@@ -26,3 +29,4 @@ router.get('/realtimeproducts', async (req, res) => {
 });
 
 module.exports = router;
+*/

@@ -1,4 +1,4 @@
-const fs = require('fs').promises;
+/* const fs = require('fs').promises;
 const path = require('path');
 
 class ProductManager {
@@ -88,3 +88,5 @@ class ProductManager {
 }
 
 module.exports = ProductManager;
+
+*/

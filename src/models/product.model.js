@@ -1,12 +1,13 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
-    nombre: { type: String, required: true },
-    precio: { type: Number, required: true },
-    img: { type: String },
-    categoria: { type: String },
-    talle: { type: [String] }
+    nombre: String,
+    precio: Number,
+    img: String,
+    categoria: String,
+    talle: [String]
 });
 
-// Este modelo apunta a la colección 'products' dentro de la base de datos 'Store'
-export const ProductModel = mongoose.model('products', productSchema);
+const ProductModel = mongoose.model('products', productSchema);
+
+module.exports = ProductModel;

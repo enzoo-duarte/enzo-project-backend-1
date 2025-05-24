@@ -1,3 +1,5 @@
+// SE ANULA PARA PODER HACER PRUEBAS CON POSTMAN, YA QUE TIRA ERROR 
+/* 
 const express = require('express');
 const path = require('path');
 const CartManager = require('../managers/CartManager');
@@ -58,3 +60,4 @@ router.delete('/:cid/product/:pid', async (req, res) => {
 });
 
 module.exports = router;
+*/
