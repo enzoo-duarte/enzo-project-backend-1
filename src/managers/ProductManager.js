@@ -1,4 +1,4 @@
-//SE ANULA POR MIGRACIÓN DE LÓGICA A CartModel
+//SE ANULA POR MIGRACIÓN DE LÓGICA A ProductModel
 
 /* 
 const fs = require('fs').promises;
