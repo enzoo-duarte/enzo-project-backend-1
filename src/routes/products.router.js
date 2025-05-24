@@ -2,10 +2,18 @@ const express = require('express');
 const router = express.Router();
 const ProductModel = require('../models/product.model');
 
-// GET - Obtener todos los productos
+// GET - Obtener todos los productos (con filtro de categorías)
 router.get('/', async (req, res) => {
     try {
-        const products = await ProductModel.find();
+        const categoria = req.query.categoria;
+
+        let products;
+        if (categoria) {
+            products = await ProductModel.find({ categoria });
+        } else {
+            products = await ProductModel.find();
+        }
+
         res.json(products);
     } catch (error) {
         res.status(500).json({ error: 'Error al obtener productos' });
