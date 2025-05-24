@@ -6,8 +6,7 @@
       "Único"
     ],
     "precio": 25,
-    "categoria": "accesorios",
-    "id": 1
+    "categoria": "accesorios"
   },
   {
     "img": "/img/zapatillas.png",
@@ -24,8 +23,7 @@
       "44"
     ],
     "precio": 95,
-    "categoria": "calzado",
-    "id": 2
+    "categoria": "calzado"
   },
   {
     "img": "/img/camiseta.png",
@@ -37,8 +35,7 @@
       "XL"
     ],
     "precio": 35,
-    "categoria": "indumentaria",
-    "id": 3
+    "categoria": "indumentaria"
   },
   {
     "img": "/img/campera.png",
@@ -50,8 +47,7 @@
       "XL"
     ],
     "precio": 85,
-    "categoria": "indumentaria",
-    "id": 4
+    "categoria": "indumentaria"
   },
   {
     "img": "/img/buzo.png",
@@ -63,8 +59,7 @@
       "XL"
     ],
     "precio": 60,
-    "categoria": "indumentaria",
-    "id": 5
+    "categoria": "indumentaria"
   },
   {
     "img": "/img/ojotas.png",
@@ -81,8 +76,7 @@
       "44"
     ],
     "precio": 50,
-    "categoria": "calzado",
-    "id": 6
+    "categoria": "calzado"
   },
   {
     "img": "/img/rinonera.png",
@@ -91,8 +85,7 @@
       "Único"
     ],
     "precio": 30,
-    "categoria": "accesorios",
-    "id": 7
+    "categoria": "accesorios"
   },
   {
     "img": "/img/sombrero.png",
@@ -101,8 +94,7 @@
       "Único"
     ],
     "precio": 35,
-    "categoria": "accesorios",
-    "id": 8
+    "categoria": "accesorios"
   },
   {
     "img": "/img/botas.png",
@@ -119,8 +111,7 @@
       "44"
     ],
     "precio": 120,
-    "categoria": "calzado",
-    "id": 9
+    "categoria": "calzado"
   },
   {
     "img": "/img/medias.png",
@@ -131,7 +122,6 @@
       "L"
     ],
     "precio": 25,
-    "categoria": "indumentaria",
-    "id": 10
+    "categoria": "indumentaria"
   }
 ]
