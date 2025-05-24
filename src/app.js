@@ -3,8 +3,9 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const mongoose = require('mongoose');
 
-// SE ANULA PARA PODER HACER PRUEBAS CON POSTMAN, YA QUE TIRA ERROR 
+// SE ANULA PARA PODER HACER PRUEBAS CON POSTMAN, YA QUE TIRABA ERROR 
 /* const viewsRouter = require('./routes/views.router'); */
+
 const productsRouter = require('./routes/products.router');
 
 const cartsRouter = require('./routes/carts.router');
@@ -23,8 +24,9 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Rutas
 
-// SE ANULA PARA PODER HACER PRUEBAS CON POSTMAN, YA QUE TIRA ERROR 
+// SE ANULA PARA PODER HACER PRUEBAS CON POSTMAN, YA QUE TIRABA ERROR 
 /* app.use('/', viewsRouter); */
+
 app.use('/api/products', productsRouter);
 
 app.use('/api/carts', cartsRouter);

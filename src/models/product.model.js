@@ -8,7 +8,12 @@ const productSchema = new mongoose.Schema({
         type: String,
         index: true
     },
-    talle: [String]
+    talle: [String],
+    stock: {
+        type: Number,
+        default: 0,
+        min: 0
+    }
 });
 
 const ProductModel = mongoose.model('products', productSchema);
